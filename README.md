@@ -2,7 +2,6 @@
 
 This project analyzes customer churn for a subscription-based service provider, builds a prediction model, and includes a collaborative filtering recommendation engine to enhance customer retention. It also provides a Flask API for deploying the churn prediction model.
 
----
 
 ## 🚀 Features
 - **Exploratory Data Analysis (EDA):** Gain insights into churn distribution, trends, and key patterns.
