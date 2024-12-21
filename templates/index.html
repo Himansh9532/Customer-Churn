@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Churn Prediction</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
             color: #333;
@@ -40,7 +40,7 @@
             max-width: 600px;
             margin: 50px auto;
             padding: 20px;
-            background: #ffffff;
+            background: #fff;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
         }
@@ -62,7 +62,8 @@
             color: #555;
         }
 
-        input, select {
+        input,
+        select {
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
@@ -96,6 +97,25 @@
             font-weight: bold;
             border-radius: 5px;
         }
+
+        .recommendations {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff3e0;
+            border: 1px solid #ff9800;
+            color: #f57c00;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .recommendations ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .recommendations ul li {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -118,16 +138,16 @@
             </select>
 
             <label for="Age">Age</label>
-            <input type="number" name="Age" id="Age" required>
+            <input type="number" name="Age" id="Age" required />
 
             <label for="Tenure">Tenure</label>
-            <input type="number" name="Tenure" id="Tenure" required>
+            <input type="number" name="Tenure" id="Tenure" required />
 
             <label for="MonthlyCharges">Monthly Charges</label>
-            <input type="number" step="0.01" name="MonthlyCharges" id="MonthlyCharges" required>
+            <input type="number" step="0.01" name="MonthlyCharges" id="MonthlyCharges" required />
 
             <label for="TotalCharges">Total Charges</label>
-            <input type="number" step="0.01" name="TotalCharges" id="TotalCharges" required>
+            <input type="number" step="0.01" name="TotalCharges" id="TotalCharges" required />
 
             <label for="PaymentMethod">Payment Method</label>
             <select name="PaymentMethod" id="PaymentMethod">
@@ -138,24 +158,35 @@
             </select>
 
             <label for="ServiceUsage1">Service Usage 1</label>
-            <input type="number" name="ServiceUsage1" id="ServiceUsage1" required>
+            <input type="number" name="ServiceUsage1" id="ServiceUsage1" required />
 
             <label for="ServiceUsage2">Service Usage 2</label>
-            <input type="number" name="ServiceUsage2" id="ServiceUsage2" required>
+            <input type="number" name="ServiceUsage2" id="ServiceUsage2" required />
 
             <label for="ServiceUsage3">Service Usage 3</label>
-            <input type="number" name="ServiceUsage3" id="ServiceUsage3" required>
+            <input type="number" name="ServiceUsage3" id="ServiceUsage3" required />
 
             <label for="AverageSpendPerMonth">Average Spend Per Month</label>
-            <input type="number" step="0.01" name="AverageSpendPerMonth" id="AverageSpendPerMonth" required>
+            <input type="number" step="0.01" name="AverageSpendPerMonth" id="AverageSpendPerMonth" required />
 
             <button type="submit">Predict</button>
         </form>
 
         {% if prediction %}
-        <div class="prediction-result">
-            The prediction is: {{ prediction }}
-        </div>
+            <div class="prediction-result">
+                The prediction is: {{ prediction }}
+            </div>
+        {% endif %}
+
+        {% if recommendations %}
+            <div class="recommendations">
+                <h3>Recommended Similar Customers:</h3>
+                <ul>
+                    {% for customer in recommendations %}
+                        <li>{{ customer }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
         {% endif %}
     </div>
 </body>

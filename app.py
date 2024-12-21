@@ -5,10 +5,10 @@ import numpy as np
 app = Flask(__name__)
 
 # Load models and encoders
-random_forest_model = joblib.load('random_forest_best_model.pkl')
-le_gender = joblib.load('le_gender.pkl')
-le_payment_method = joblib.load('le_payment_method.pkl')
-le_churn = joblib.load('le_churn.pkl')
+random_forest_model = joblib.load('model/random_forest_best_model.pkl')
+le_gender = joblib.load('model/le_gender.pkl')
+le_payment_method = joblib.load('model/le_payment_method.pkl')
+le_churn = joblib.load('model/le_churn.pkl')
 
 @app.route('/')
 def home():
