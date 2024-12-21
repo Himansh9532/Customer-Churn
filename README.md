@@ -31,7 +31,7 @@ Confusion Matrix Insights:
 
 Effectively classified both churned and retained customers, with minimal false positives and negatives.
 3. Feature Importance
-![Feature Importance](images/Feature importance.png)
+![Feature Importance](images/Feature%20importance.png)
 Top Factors Contributing to Churn:
 Tenure: Longer tenures reduce churn probability.
 Monthly Charges: Higher charges increase churn risk.
@@ -54,6 +54,17 @@ Leverage the collaborative filtering recommendation engine to suggest relevant s
 
 Conclusion
 The analysis provides actionable insights into customer churn behavior and effective strategies to enhance retention. The predictive model can guide targeted interventions, while the recommendation engine offers opportunities to improve engagement and satisfaction
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## 📂 Project Structure
