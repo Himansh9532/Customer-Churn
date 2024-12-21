@@ -10,20 +10,25 @@ This project analyzes customer churn for a subscription-based service provider, 
 - **Recommendation Engine:** Collaborative filtering to suggest additional services/products.
 - **Deployment:** Flask API for churn prediction.
 
----
+
 
 ## 📂 Project Structure
 
-📦Project Folder ├── 📄 app.py # Flask API code ├── 📄 churn_model.pkl # Trained Random Forest model ├── 📊 data/ # Dataset files ├── 📄 requirements.txt # Python dependencies ├── 📄 README.md # Project documentation ├── 📄 notebook.ipynb # Jupyter notebook with detailed analysis
+📦Project Folder 
+├── 📄 app.py # Flask API code 
+├── 📄 churn_model.pkl # Trained Random Forest model
+├── 📊 data/ # Dataset files 
+├── 📄 requirements.txt # Python dependencies 
+├── 📄 README.md # Project documentation 
+├── 📄 notebook.ipynb # Jupyter notebook with detailed analysis
 
-
----
 
 ## 🛠️ Setup Instructions
 
 ### Prerequisites
 - Python 3.8 or higher
 - Recommended: Virtual environment (e.g., `venv`, `conda`)
+
 
 ### Installation
 1. Clone this repository:
@@ -32,6 +37,7 @@ This project analyzes customer churn for a subscription-based service provider, 
    cd churn-prediction
    Install dependencies:
 pip install -r requirements.txt
+
 Launch the Flask API:
 python app.py
 🖥️ Usage
@@ -41,6 +47,9 @@ The Flask API predicts churn based on input customer data.
 Endpoint: /predict
 
 Method: POST
+
+
+
 
 Sample Input:
 {
@@ -54,11 +63,11 @@ Sample Input:
     "ServiceUsage2": 40,
     "ServiceUsage3": 70
 }
-📊 Results
-Feature Importance
+
 
 Recommendations
 Collaborative filtering suggests personalized services to customers based on their similarity scores and usage patterns.
+
 
 🤝 Contributing
 Fork the repository.
@@ -66,8 +75,6 @@ Create a feature branch: git checkout -b feature-name.
 Commit your changes: git commit -m "Add new feature".
 Push to the branch: git push origin feature-name.
 Open a pull request.
-📜 License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 📞 Contact
 Name: Himanshu Gupta
