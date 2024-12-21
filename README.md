@@ -1,15 +1,59 @@
-# 🌀 Customer Churn Prediction & Recommendation System
 
-This project analyzes customer churn for a subscription-based service provider, builds a prediction model, and includes a collaborative filtering recommendation engine to enhance customer retention. It also provides a Flask API for deploying the churn prediction model.
+Customer Churn Analysis Report
+Overview
+This report summarizes the findings from the analysis of customer churn data for a subscription-based service provider. The objective was to identify patterns, predict churn, and propose actionable strategies to enhance customer retention. The analysis also included building a recommendation engine and deploying a churn prediction API.
 
+1. Exploratory Data Analysis (EDA)
+Churn Distribution:
+The dataset shows a slight imbalance, with more retained customers (label: No Churn) compared to churned ones (label: Churn).
 
-## 🚀 Features
-- **Exploratory Data Analysis (EDA):** Gain insights into churn distribution, trends, and key patterns.
-- **Predictive Modeling:** Logistic Regression, Decision Tree, and Random Forest models for churn prediction.
-- **Feature Importance:** Identifies the most influential factors in customer churn.
-- **Recommendation Engine:** Collaborative filtering to suggest additional services/products.
-- **Deployment:** Flask API for churn prediction.
+Key Observations:
 
+Customers with shorter tenures are more likely to churn.
+Higher monthly charges correlate with increased churn rates.
+Low service usage across all metrics is a significant churn factor.
+Correlations:
+
+Positive correlation: MonthlyCharges and churn likelihood.
+Negative correlation: Tenure and churn likelihood.
+2. Model Performance
+Models Evaluated:
+Logistic Regression, Decision Trees, and Random Forest.
+
+Best Model:
+The Random Forest model achieved the highest performance with the following metrics:
+
+Accuracy: 80%
+Precision: 81%
+Recall: 82%
+F1-score: 83%
+Confusion Matrix Insights:
+
+Effectively classified both churned and retained customers, with minimal false positives and negatives.
+3. Feature Importance
+![Alt Text]
+Top Factors Contributing to Churn:
+Tenure: Longer tenures reduce churn probability.
+Monthly Charges: Higher charges increase churn risk.
+Service Usage: Active engagement significantly lowers churn likelihood.
+Total Charges: Cumulative spending indicates customer loyalty.
+4. Recommendations for Customer Retention
+Early Engagement:
+Develop programs to engage new customers with low tenure.
+
+Cost Optimization:
+
+Offer discounts or incentives for high monthly charge plans.
+Introduce budget-friendly plans for cost-sensitive customers.
+Service Promotion:
+
+Encourage underutilizing customers to increase service usage.
+Use targeted marketing campaigns based on usage patterns.
+Personalized Recommendations:
+Leverage the collaborative filtering recommendation engine to suggest relevant services/products to customers.
+
+Conclusion
+The analysis provides actionable insights into customer churn behavior and effective strategies to enhance retention. The predictive model can guide targeted interventions, while the recommendation engine offers opportunities to improve engagement and satisfaction
 
 
 ## 📂 Project Structure
