@@ -1,6 +1,3 @@
-Here is a refined version of your report with improved formatting, headings, and icons suitable for inclusion in a GitHub README file:
-
----
 
 # **Customer Churn Analysis Report**
 
