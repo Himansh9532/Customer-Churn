@@ -31,7 +31,7 @@ Confusion Matrix Insights:
 
 Effectively classified both churned and retained customers, with minimal false positives and negatives.
 3. Feature Importance
-![Alt Text]
+![Feature Importance]("images/Feature importance.png")
 Top Factors Contributing to Churn:
 Tenure: Longer tenures reduce churn probability.
 Monthly Charges: Higher charges increase churn risk.
