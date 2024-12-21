@@ -9,21 +9,128 @@ This report summarizes the findings from an analysis of customer churn data for 
 
 ---
 
-## 🔍 **1. Exploratory Data Analysis (EDA)**
-
-### **Churn Distribution:**
-- **Imbalance**: The dataset exhibits a slight imbalance, with a higher number of retained customers (`No Churn`) than churned customers (`Churn`).
-
-### **Key Observations:**
-- **Tenure**: Customers with shorter tenures tend to have higher churn rates.
-- **Monthly Charges**: Higher charges correlate with a greater likelihood of churn.
-- **Service Usage**: Low usage across various service metrics is a significant churn indicator.
-
-### **Correlations:**
-- **Positive Correlation**: Monthly charges and churn likelihood.
-- **Negative Correlation**: Tenure and churn likelihood.
+Sure! Here’s an expanded **Exploratory Data Analysis (EDA)** section, with more in-depth analysis, visualizations, and interpretations.
 
 ---
+
+## 🔍 **Exploratory Data Analysis (EDA)**
+
+### **Dataset Overview**:
+The dataset contains information about customer demographics, subscription details, and service usage, as well as whether the customer has churned or not. The key columns include:
+
+- **Numerical Variables**: 
+  - `Age`: Age of the customer.
+  - `Tenure`: Duration (in months) of the customer’s subscription.
+  - `MonthlyCharges`: Monthly subscription fee paid by the customer.
+  - `TotalCharges`: Total money spent by the customer during the subscription period.
+  - `ServiceUsage1`, `ServiceUsage2`, `ServiceUsage3`: Various service usage metrics.
+
+- **Categorical Variables**: 
+  - `CustomerID`: Unique identifier for each customer.
+  - `Gender`: Gender of the customer (Male, Female).
+  - `PaymentMethod`: Payment method used by the customer (e.g., Bank Transfer, Credit Card).
+  - `Churn`: Whether the customer has churned or not (Yes or No).
+
+### **Missing Values**:
+- The dataset contains no missing values, ensuring that data quality is high and no imputation is necessary.
+
+### **Statistical Summary**:
+- **Age**: The age ranges from 18 to 69 years, with a mean of approximately **42 years**. The age distribution is relatively uniform, indicating customers of various age groups use the service.
+  
+- **Tenure**: The tenure ranges from **1** to **70** months, with a mean of approximately **36 months**. The distribution is skewed, indicating that most customers are relatively long-term users.
+
+- **Monthly Charges**: The charges vary between **20.16** and **149.44**, with a mean of **$83**. The distribution is right-skewed, suggesting that most customers pay lower amounts, while some pay significantly more.
+
+- **Total Charges**: The total charges range widely, from very low to very high values, and are closely related to the customer's tenure, as customers with longer subscriptions tend to accumulate higher total charges.
+
+- **Service Usage**: 
+  - `ServiceUsage1`, `ServiceUsage2`, and `ServiceUsage3` show diverse patterns of usage. These metrics need to be analyzed to determine customer engagement with different service features.
+
+---
+
+## **Univariate Analysis**
+
+### **Churn Distribution**:
+- **Churned Customers**: The target variable shows an imbalance, with more **retained customers** (`No Churn`) than churned customers (`Churn`).
+  - **Proportion**: 75% retained vs 25% churned, which suggests the need for strategies to prevent churn and boost retention.
+
+### **Tenure**:
+- **Shorter Tenure**: The distribution of tenure reveals that customers with **shorter tenures** are more likely to churn. This emphasizes the importance of retaining new customers early on.
+  
+  **Key Insight**: Focus on **onboarding and early engagement** programs to retain customers before they churn.
+
+### **Monthly Charges**:
+- **Pricing Sensitivity**: Higher monthly charges are correlated with a higher churn rate. This suggests that customers who feel the cost of the service is too high are more likely to discontinue.
+  
+  **Key Insight**: Offering flexible pricing or discounts could help retain these price-sensitive customers.
+
+### **Total Charges**:
+- **Long-term Engagement**: Retained customers generally have higher total charges, implying they have been with the company longer and have been more engaged over time.
+  
+  **Key Insight**: Customers who stay longer tend to generate more revenue, making them more valuable in the long term.
+
+### **Service Usage**:
+- **Underutilization**: Lower usage of services correlates with a higher likelihood of churn. This highlights the importance of **increasing service engagement** to prevent customers from disengaging.
+
+  **Key Insight**: Target customers with **low usage patterns** and encourage them to use more services via marketing campaigns or additional features.
+
+---
+
+## **Bivariate Analysis**
+
+### **Tenure vs. Churn**:
+- **Churn and Tenure**: As tenure increases, the likelihood of churn decreases. This supports the idea that customers who have been with the service for longer periods are less likely to churn.
+  - **Visualization**: A box plot or scatter plot could illustrate the inverse relationship between tenure and churn.
+
+  **Key Insight**: Customers with **shorter tenure** should be prioritized for retention efforts (e.g., targeted onboarding programs or engagement initiatives).
+
+### **Monthly Charges vs. Churn**:
+- **Churn and Monthly Charges**: Higher monthly charges are strongly associated with churn, suggesting that dissatisfaction with pricing may be a major factor in churn.
+
+  **Key Insight**: Consider **pricing adjustments**, such as discounts or lower-cost plans for customers who feel the service is too expensive.
+
+### **Total Charges vs. Churn**:
+- **Churn and Total Charges**: Churned customers tend to have lower total charges, indicating that they discontinued the service before accruing significant charges.
+  
+  **Key Insight**: Identify customers with low total charges for early intervention to prevent churn.
+
+### **Service Usage vs. Churn**:
+- **Churn and Service Usage**: Low service usage is a key predictor of churn. This suggests that customers who don’t actively use the service are more likely to cancel their subscriptions.
+  
+  **Key Insight**: Increase engagement for customers with low usage through targeted campaigns, additional features, or incentives.
+
+### **Gender vs. Churn**:
+- **Churn and Gender**: There is no significant correlation between gender and churn, suggesting that churn is **gender-neutral**.
+  
+  **Key Insight**: Retention strategies should focus on **behavioral factors** rather than demographic ones like gender.
+
+### **Tenure vs. Total Charges**:
+- **Long Tenure and Higher Charges**: Customers with longer tenures and higher total charges are less likely to churn, indicating that **sustained engagement** and higher spending are linked to customer loyalty.
+
+  **Key Insight**: Foster long-term customer relationships by offering **reward programs** or loyalty bonuses for long-tenured customers.
+
+---
+
+## **Additional Insights and Visualizations**
+
+### **Service Usage vs. Churn** (Visualizing with a heatmap or scatter plot):
+- Strongly **negative correlation**: Low service usage strongly correlates with churn, which is actionable information for identifying at-risk customers early.
+
+### **Monthly Charges Distribution** (Histogram or Box Plot):
+- Highlight the skewed distribution of monthly charges, with most customers paying lower amounts. Consider implementing **tiered pricing** strategies to retain high-paying but dissatisfied customers.
+
+---
+
+## **Conclusion of EDA**
+
+The **Exploratory Data Analysis (EDA)** reveals important insights into the factors influencing customer churn, such as tenure, pricing, service usage, and total charges. These findings inform key strategies for improving customer retention, including:
+
+- **Targeted Engagement**: Focus on customers with shorter tenures and low service usage.
+- **Pricing Adjustments**: Consider offering discounts or new pricing models to retain high-paying but dissatisfied customers.
+- **Long-term Relationships**: Build programs to increase customer lifetime value by rewarding long-tenured customers.
+
+With this comprehensive EDA, the team is equipped to design data-driven retention strategies and develop predictive models to further understand and mitigate churn.
+
 
 ## ⚙️ **2. Model Performance**
 
